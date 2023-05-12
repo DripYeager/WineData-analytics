@@ -1,0 +1,18 @@
+first i removed rows user_name, review title, review description, points
+
+then i tried to find the na values and filled price value by averaging the price of that variety of wine
+also out of 103322 rows almost half of them 58459 had no value for region2 so i removed it
+
+also there were 30309 types of designations and 29636 were empty thats combined that is 59945 which is more than half of the dataset so i dropped that too.
+
+there are too many types of regions for one variety of wine (378 for 11753(Chardonnay) which is 29 per region) this will decrease models accuracy. so i am dropping this factor too.
+
+after doing all this there were 39 total rows empty because of country and province so we dropped them because it is very small compared to size of dataset.
+
+we started with 103322 rows and now we have 103283 rows of sorted data which is only 39 less.
+
+now there are many provinces with very few counts(even many are with count 1 only). also there are 278 province with count less than 50 and 299 with province less than 100 and 91 greater than 50. so i will mark all these provinces as others
+so now including others i have 92 types of provinces
+
+similarly for winery there are 12151 winery less than 10 so marking them as other
+now there are 92 unique winery
